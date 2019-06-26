@@ -3,6 +3,7 @@ import * as path from 'path';
 import * as url from 'url';
 import {getPluginEntry} from './src/lib/mpvjs';
 
+process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
 
 const pdir = path.join(__dirname, 'src', 'lib', 'mpvjs', 'build', 'Release');
 if (process.platform !== 'linux') {process.chdir(pdir);}

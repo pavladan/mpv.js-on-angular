@@ -4,6 +4,7 @@ var electron_1 = require("electron");
 var path = require("path");
 var url = require("url");
 var mpvjs_1 = require("./src/lib/mpvjs");
+process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
 var pdir = path.join(__dirname, 'src', 'lib', 'mpvjs', 'build', 'Release');
 if (process.platform !== 'linux') {
     process.chdir(pdir);

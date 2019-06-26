@@ -7,7 +7,6 @@
   "scripts": {
     "install": "prebuild-install -t 1.0.0 || node-gyp rebuild",
     "test": "eslint .",
-    "example": "electron example",
     "use-system-ffmpeg": "gcc -Wl,--no-as-needed -shared -lavformat -o node_modules/electron/dist/libffmpeg.so",
     "prebuild-win": "rd /s /q prebuilds & prebuild -t 1.0.0 -a ia32 && prebuild -t 1.0.0 -a x64",
     "prebuild-posix": "rm -rf prebuilds && prebuild -t 1.0.0 -a x64 --strip",
@@ -33,20 +32,6 @@
     "url": "https://github.com/Kagami/mpv.js/issues"
   },
   "dependencies": {
-    "prebuild-install": "^5.0.0",
-    "prop-types": "^15.6.2"
-  },
-  "peerDependencies": {
-    "react": "^15.3.0 || ^16.0.0"
-  },
-  "devDependencies": {
-    "babel-standalone": "^6.26.0",
-    "electron": "^1.8.8",
-    "electron-debug": "^2.0.0",
-    "eslint": "^5.2.0",
-    "eslint-plugin-react": "^7.10.0",
-    "prebuild": "^7.6.1",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "prebuild-install": "^5.0.0"
   }
 }

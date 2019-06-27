@@ -1,7 +1,7 @@
 import { app, BrowserWindow, screen } from 'electron';
 import * as path from 'path';
 import * as url from 'url';
-import {getPluginEntry} from './src/lib/mpvjs';
+import {getPluginEntry} from 'mpv.js-vanilla';
 
 process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
 

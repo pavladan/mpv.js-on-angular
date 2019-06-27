@@ -3,14 +3,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var electron_1 = require("electron");
 var path = require("path");
 var url = require("url");
-var mpvjs_1 = require("./src/lib/mpvjs");
+var mpv_js_vanilla_1 = require("mpv.js-vanilla");
 process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
 var pdir = path.join(__dirname, 'src', 'lib', 'mpvjs', 'build', 'Release');
 if (process.platform !== 'linux') {
     process.chdir(pdir);
 }
 electron_1.app.commandLine.appendSwitch('ignore-gpu-blacklist');
-electron_1.app.commandLine.appendSwitch('register-pepper-plugins', mpvjs_1.getPluginEntry(pdir));
+electron_1.app.commandLine.appendSwitch('register-pepper-plugins', mpv_js_vanilla_1.getPluginEntry(pdir));
 var win, serve;
 var args = process.argv.slice(1);
 serve = args.some(function (val) { return val === '--serve'; });

@@ -1,5 +1,5 @@
 import {Component,  OnInit, ElementRef} from '@angular/core';
-import {MpvJs} from '../../../lib/mpvjs';
+import {MpvJs} from 'mpv.js-vanilla';
 import {remote} from 'electron';
 
 @Component({

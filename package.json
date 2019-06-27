@@ -83,5 +83,7 @@
   "engines": {
     "node": ">=10.9.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "mpv.js-vanilla": "^0.3.1"
+  }
 }

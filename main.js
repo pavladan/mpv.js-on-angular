@@ -5,7 +5,7 @@ var path = require("path");
 var url = require("url");
 var mpv_js_vanilla_1 = require("mpv.js-vanilla");
 process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
-var pdir = path.join(__dirname, 'src', 'lib', 'mpvjs', 'build', 'Release');
+var pdir = path.join(path.dirname(require.resolve("mpv.js-vanilla")), 'build', 'Release');
 if (process.platform !== 'linux') {
     process.chdir(pdir);
 }

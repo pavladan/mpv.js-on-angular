@@ -5,7 +5,7 @@ import {getPluginEntry} from 'mpv.js-vanilla';
 
 process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
 
-const pdir = path.join(__dirname, 'src', 'lib', 'mpvjs', 'build', 'Release');
+const pdir = path.join(path.dirname(require.resolve("mpv.js-vanilla")), 'build', 'Release');
 if (process.platform !== 'linux') {process.chdir(pdir);}
 app.commandLine.appendSwitch('ignore-gpu-blacklist');
 app.commandLine.appendSwitch('register-pepper-plugins', getPluginEntry(pdir));

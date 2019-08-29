@@ -84,6 +84,6 @@
     "node": ">=10.9.0"
   },
   "dependencies": {
-    "mpv.js-vanilla": "^0.3.1"
+    "mpv.js-vanilla": "^0.3.4"
   }
 }
